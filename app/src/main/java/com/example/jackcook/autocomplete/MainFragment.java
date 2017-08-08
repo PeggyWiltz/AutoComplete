@@ -92,19 +92,18 @@ public class MainFragment extends Fragment {
 
     private void initConstraints() {
 
-        constraintSetClosed.clone(getContext(), R.layout.fragment_hidden_main); // get constraints from layout
-
-        hideRecyclerViewConstraintSet.clone(constraintLayout);
+        hideRecyclerViewConstraintSet.clone(getContext(), R.layout.fragment_hidden_main); // get constraints from layout
 
         showRecyclerViewConstraintSet.clone(constraintLayout);
     }
 
     private void hideIt() {
         TransitionManager.beginDelayedTransition(constraintLayout);
-        constraintSetClosed.applyTo(constraintLayout);
+        hideRecyclerViewConstraintSet.applyTo(constraintLayout);
     }
 
     private void showIt() {
+        TransitionManager.beginDelayedTransition(constraintLayout);
         showRecyclerViewConstraintSet.applyTo(constraintLayout);
 
     }
