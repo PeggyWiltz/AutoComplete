@@ -16,8 +16,7 @@
         android:text="placeholder for results recyclerview\n\n\n\n\n\n\noink"
         android:background="@android:color/holo_blue_light"/>
 
-    <RelativeLayout
-        android:id="@+id/location"
+    <RelativeLayout android:id="@+id/location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_height="100dp"
